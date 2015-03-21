@@ -2,21 +2,20 @@
 	// Global variables and configurations
 	// (I know global variables are a big no-no, but I wanted to ship soon and the production environment was pretty much secure/isolated)
 	
-	if (substr(__FILE__,0,10) == 'C:\easyphp'){
-		//$DB_SERVER = 'localhost'; // Local test environment
-		$DB_SERVER = 'database.gebh.net'; // Remote (production)
+	if (substr(__FILE__,0,10) == '<local file path>'){
+		$DB_SERVER = 'localhost'; // Local test environment
 		$SITE_URL = 'http://127.0.0.1/blablabra/';
 	}
-	else { // Production settings - do not change those
-		$DB_SERVER = 'database.gebh.net';
-		$SITE_URL = 'http://blablabra.net/';
+	else { // Production settings
+		$DB_SERVER = '<insert database server here>';
+		$SITE_URL = '<insert production URL here - used to be blablabra.net';
 		//error_reporting(0);
 		error_reporting(E_ALL);
 	}
 		
-	$DB_USER = 'blablab_script';
-	$DB_PASSWORD = 'g3pXe21ZXzVb1q';
-	$DB_DATABASE = 'blablab_production';
+	$DB_USER = '<insert DB username here>';
+	$DB_PASSWORD = '<insert DB password here>';
+	$DB_DATABASE = '<insert DB name here>';
 	
 	// Time zone difference between the servers (zero if it is the local test server)
 	//if ($SITE_URL == 'http://blablabra.net/') $TIME_OFFSET = 2;
